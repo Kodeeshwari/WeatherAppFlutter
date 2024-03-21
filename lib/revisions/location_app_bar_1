@@ -1,0 +1,27 @@
+AppBar(
+    centerTitle: true,
+    backgroundColor: ColorTheme.bgColor,
+    elevation: 0,
+    leading: IconButton(
+        onPressed: () {},
+        icon: SvgPicture.asset('assets/images/ico_menu.svg'),
+    ),
+    title: Column(
+        children: [
+            Text(
+                'Montreal',
+                style: Theme.of(context).textTheme.titleSmall,
+            ),
+            Text('Sun, November 16',
+                style: Theme.of(context)
+                .textTheme
+                .bodySmall ?
+                .copyWith(color: ColorTheme.smallText)),
+        ],
+    ),
+    actions: [
+        IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset('assets/images/ico_add.svg'))
+    ],
+)

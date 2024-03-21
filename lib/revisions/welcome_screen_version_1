@@ -1,0 +1,67 @@
+SizedBox(
+      child: Stack(
+        children: [
+          SvgPicture.asset(
+            'assets/images/bg.svg',
+            fit: BoxFit.cover,
+            height: double.infinity,
+            width: double.infinity,
+          ),
+          Positioned(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 200, 8, 0),
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/images/rainy_lightning_windy_sunny.svg',
+                        width: 220,
+                        height: 220,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(35, 50, 35, 0),
+                  child: Text(
+                    'Weather',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(35, 10, 35, 10),
+                  child: Text(
+                    'Forecast App',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(35, 10, 55, 10),
+                  child: Text(
+                    'Its the newest weather app. It has a bunch of features and that includes most of the ones that every weather app has.',
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+                  child: Center(
+                    child: ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                ColorTheme.primaryColor)),
+                        onPressed: () {},
+                        child: Text(
+                          'Get Started',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        )),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
